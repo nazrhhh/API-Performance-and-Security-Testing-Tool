@@ -2,11 +2,10 @@
 
 A web-based tool for evaluating RESTful API performance and security metrics, developed as a Final Year Project at Multimedia University (MMU).
 
-**Project ID:** FYP01-SE-T2530-0302  
+**Project ID:** FYP02-SE-T2610-0302  
 **Student:** Haizatul Nazirah Nizam Binti Hairunizam (1231303504)  
 **Supervisor:** Dr. Shahid Kamal  
-**Programme:** Bachelor of Computer Science (Hons.) in Software Engineering  
-**Faculty:** Faculty of Computing and Informatics, Multimedia University  
+**Programme:** Bachelor of Computer Science (Hons.) in Software Engineering   
 
 ---
 
@@ -177,5 +176,5 @@ http://localhost:3000
 
 ## License
 
-This project was developed for academic purposes as part of CPT6324 Final Year Project II at Multimedia University.  
+This project was developed for academic purposes as part of CPT6324 Final Year Project II at Multimedia University (MMU).  
 © 2026 Haizatul Nazirah Nizam Binti Hairunizam. All rights reserved.
