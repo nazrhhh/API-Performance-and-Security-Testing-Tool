@@ -56,7 +56,6 @@ const App = () => {
       setTestHistory((prev) => [results, ...prev.slice(0, 9)]);
       setActiveTab("results");
 
-      setApiUrl("");
       setHttpMethod("GET");
       setHeaders('{"Content-Type": "application/json"}');
       setRequestBody("");

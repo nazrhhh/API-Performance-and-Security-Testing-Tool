@@ -113,20 +113,39 @@ const ResultsTab = ({ testResults }) => {
             <BarChart2 size={20} color="#8b5cf6" /> Distribution
           </h3>
           <ResponsiveContainer width="100%" height={280}>
-            <PieChart>
-              <Pie
-                data={testResults.responseTimeDistribution.filter(d => d.count > 0).slice(0, 4)}
-                cx="50%" cy="50%" outerRadius={90}
-                dataKey="count"
-                label={({ range, percent }) => `${range}: ${(percent * 100).toFixed(0)}%`}
-                labelLine={false}
-              >
-                {testResults.responseTimeDistribution.filter(d => d.count > 0).slice(0, 4).map((_, index) => (
-                  <Cell key={index} fill={COLORS[index % COLORS.length]} />
-                ))}
-              </Pie>
-              <Tooltip contentStyle={{ background: "#ffffff", border: "1px solid #e2e8f0", borderRadius: "8px" }} />
-            </PieChart>
+            {testResults.responseTimeDistribution.filter(d => d.count > 0).length === 1 ? (
+              <PieChart>
+                <Pie
+                  data={[{ range: testResults.responseTimeDistribution.find(d => d.count > 0).range, count: 1 }]}
+                  cx="50%"
+                  cy="50%"
+                  outerRadius={90}
+                  dataKey="count"
+                  label={({ range }) => `${range}: 100%`}
+                  labelLine={false}
+                >
+                  <Cell fill={COLORS[0]} />
+                </Pie>
+                <Tooltip contentStyle={{ background: "#ffffff", border: "1px solid #e2e8f0", borderRadius: "8px" }} />
+              </PieChart>
+            ) : (
+              <PieChart>
+                <Pie
+                  data={testResults.responseTimeDistribution.filter(d => d.count > 0).slice(0, 4)}
+                  cx="50%"
+                  cy="50%"
+                  outerRadius={90}
+                  dataKey="count"
+                  label={({ range, percent }) => `${range}: ${(percent * 100).toFixed(0)}%`}
+                  labelLine={false}
+                >
+                  {testResults.responseTimeDistribution.filter(d => d.count > 0).slice(0, 4).map((_, index) => (
+                    <Cell key={index} fill={COLORS[index % COLORS.length]} />
+                  ))}
+                </Pie>
+                <Tooltip contentStyle={{ background: "#ffffff", border: "1px solid #e2e8f0", borderRadius: "8px" }} />
+              </PieChart>
+            )}
           </ResponsiveContainer>
         </div>
       </div>

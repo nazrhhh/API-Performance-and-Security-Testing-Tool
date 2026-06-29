@@ -83,7 +83,7 @@ const Header = () => {
             flexShrink: 0,
           }}
         >
-          <div style={{ fontWeight: 600 }}>FYP01-SE-T2610-0302</div>
+          <div style={{ fontWeight: 600 }}>FYP02-SE-T2610-0302</div>
           <div>Haizatul Nazirah Nizam</div>
           <div>1231303504</div>
         </div>
